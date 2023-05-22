@@ -1,4 +1,3 @@
-// import { useState, useEffect } from "react";
 import './Filter.css'
 
 function Filter({ data, setData }) {
