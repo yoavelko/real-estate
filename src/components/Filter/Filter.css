@@ -1,0 +1,83 @@
+#img-filter {
+    margin-bottom: -2.5%;
+}
+
+#filterContainer {
+    height: 65%;
+    width: calc(14vw);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+}
+
+#optContainer {
+    display: none;
+    position: absolute;
+    background-color: rgb(243,245,247);
+    width: 28.55%;
+    border: 1.9px rgba(0, 0, 0, 0.708) solid;
+    border-radius: 5px;
+    padding: 2vw;
+    
+}
+
+#shower {
+    width: 100%;
+    height: 100%;
+}
+
+#filterContainer:hover #optContainer {
+    display: block;
+}
+
+.optLine {
+    align-self: baseline;
+    line-height: 4vh;
+}
+
+#btnFlexer {
+    display: flex;
+    justify-content: center;
+}
+
+#subBtn {
+    width: 8vw;
+    height: 6vh;
+    border-radius: 20px;
+    border: rgb(169,211,4) solid;
+    background-color: rgb(169,211,4);
+    color: rgb(243,245,247);
+}
+
+#subBtn:hover {
+    background-color: rgb(243,245,247);
+    color: rgb(169,211,4);
+}
+
+.innerContainers {
+    margin-bottom: 4vh;
+    margin-right: 2vw;
+    line-height: 4vh;
+}
+
+#flexer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width:768px){
+    
+    #optContainer {
+        left: 5%;
+        width: 90%;
+        z-index: 1;
+        padding: 5%;
+    }
+
+    #subBtn {
+        width: 30vw;
+    }
+
+    #filterContainer {
+        width: 22.5%;
+    }
+}

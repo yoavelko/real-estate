@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: rgb(184, 177, 177);
+}
+
+@media screen and (max-width: 768px) {
+
+  #react-root {
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+  }
+
+  #root {
+    width: 90vw;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    width: 90vw;
+    margin: 0;
+    padding: 0;
+  }
+}

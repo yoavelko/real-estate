@@ -1,0 +1,142 @@
+#backGround {
+    background-color: rgb(184, 177, 177);
+}
+
+#logSignContainer {
+    margin: 5vw;
+    height: 70vh;
+    background-color: rgb(243, 245, 247);
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-evenly
+}
+
+.dualContainer {
+    margin: 5vw;
+    background-color: rgb(243, 245, 247);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    line-height: 10vh;
+}
+
+#breaker {
+    height: 90%;
+    top: 5%;
+    border-left: 4px solid rgba(0, 0, 0, 0.301);
+    position: relative;
+}
+
+#mediaBreaker {
+    display: none;
+}
+
+#or {
+    width: 5vw;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: -2.5vw;
+    background-color: rgb(243, 245, 247);
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.301);
+}
+
+.inputContainers {
+    display: flex;
+    justify-content: center;
+    margin-right: 36px
+}
+
+.icons {
+    margin-top: 1.5vh;
+    margin-right: 1vw;
+    opacity: 0.7;
+}
+
+.headers {
+    margin-bottom: 5vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#loginSubmit {
+    width: 8vw;
+    height: 6vh;
+    border-radius: 20px;
+    border: rgb(169, 211, 4) solid;
+    background-color: rgb(169, 211, 4);
+    color: rgb(243, 245, 247);
+}
+
+#loginSubmit:hover {
+    background-color: rgb(243, 245, 247);
+    color: rgb(169, 211, 4);
+}
+
+#terms {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#termsLink {
+    color: blueviolet;
+}
+
+#termsLink:hover {
+    cursor: pointer;
+}
+
+.linkedTermsNone {
+    display: none;
+}
+
+.linkedTermsBlock {
+    display: block;
+    position: absolute;
+    margin-left: 9%;
+    transform: translateY(-30px);
+}
+
+@media screen and (max-width: 768px) {
+
+    #logSignContainer {
+        margin: 0;
+        border-radius: 0;
+        flex-direction: column;
+        height: 140vh;
+    }
+
+    #breaker {
+        display: none;
+    }
+
+    #mediaBreaker {
+        display: block;
+        width: 90%;
+        left: 5%;
+        border-bottom: 4px solid rgba(0, 0, 0, 0.301);
+        position: relative;
+        margin-top: 10vh;
+        margin-bottom: 6vh;
+    }
+
+    #or {
+        left: 42.5%;
+        top: -3.7vw;
+        width: 15%;
+    }
+
+    .linkedTermsBlock {
+        width: 75%;
+    }
+
+    #loginSubmit {
+        width: 30vw;
+    }
+}

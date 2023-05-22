@@ -1,0 +1,93 @@
+html {
+    scroll-behavior: smooth;
+  }
+
+body {
+    background-color: rgb(184, 177, 177);
+}
+
+#footerBody {
+    background-color: rgb(243,245,247);
+}
+
+#foot-container {
+    background-color: rgb(243,245,247);
+    height: 35vh;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10vh;
+    margin-top: 6vh;
+    line-height: 4vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a:visited {
+    color: rgb(0, 0, 0);
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:link {
+    color: rgb(0, 0, 0);
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.foot-cont:hover {
+    transform: translateX(15px);
+    color: rgb(1,151,252);
+}
+
+.foot-head {
+    margin-bottom: 1.5vh;
+}
+
+#rights {
+    height: 10vh;
+    text-align: center;
+    background-color: rgb(243,245,247);
+    color: rgba(0, 0, 0, 0.47);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    padding-top: 5vh;
+}
+
+.top {
+    text-align: center;
+    background-color: rgb(243,245,247);
+}
+
+#top:hover {
+    animation: jump 0.8s;
+
+}
+
+@keyframes jump {
+    0%{transform: translateY(0);}
+    30%{transform: translateY(-5px);}
+    50%{transform: translateY(0);}
+    70%{transform: translateY(-5px);}
+    90%{transform: translateY(0);}
+}
+
+#top-back {
+    text-align: center;
+    background-color: rgb(243,245,247);
+}
+
+
+@media screen and (max-width: 768px){
+
+    body {
+        width: 100vw;
+      }
+
+    #foot-container {
+        font-size: small;
+        margin-top: 0;
+    }
+
+    h4 {
+        font-size: small;
+    }
+}

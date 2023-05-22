@@ -1,0 +1,123 @@
+#container {
+    width: calc(50% - 10px);
+    background-color: rgb(243, 245, 247);
+    text-align: center;
+    margin-bottom: 2vh;
+    border-radius: 12px;
+    display: flex;
+    height: 36vh;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-between;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+}
+
+.detail {
+    font-weight: bold;
+}
+
+#pic-container {
+    width: 47.5%;
+}
+
+#pic {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+#description-container {
+    width: 47.5%;
+}
+
+#address {
+    width: 100%;
+}
+
+#address:hover #mapsLogo {
+    animation: dance 0.5s;
+}
+
+@keyframes dance {
+    0% {
+        transform: rotate(0deg) translateY(4px);
+    }
+
+    25% {
+        transform: rotate(-20deg) translateY(4px);
+    }
+
+    50% {
+        transform: rotate(0deg) translateY(4px);
+    }
+
+    75% {
+        transform: rotate(-20deg) translateY(4px);
+    }
+
+    100% {
+        transform: rotate(0deg) translateY(4px);
+    }
+}
+
+.description {
+    line-height: 4vh;
+}
+
+#like {
+    border-radius: 25px;
+    padding-left: 6.5%;
+    margin-top: 2vh;
+    background-color: rgb(169, 211, 4);
+    border: rgb(169, 211, 4) solid;
+    color: rgb(243, 245, 247);
+}
+
+#likeMedia {
+    display: none;
+}
+
+#like:hover {
+    background-color: rgb(243, 245, 247);
+    color: rgb(132, 164, 1);
+}
+
+#mapsLogo {
+    width: 20px;
+    transform: translateY(4px);
+}
+
+
+@media screen and (max-width: 768px) {
+
+    #container {
+        width: 100%;
+        border-radius: 0;
+        height: auto;
+        flex-wrap: wrap;
+    }
+
+
+    #likeMedia {
+        border-radius: 25px;
+        padding-left: 6.5%;
+        margin-top: 2vh;
+        background-color: rgb(169, 211, 4);
+        border: rgb(169, 211, 4) solid;
+        color: rgb(243, 245, 247);
+        display: block;
+    }
+
+    #mediaContainer {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    #like {
+        display: none;
+    }
+}

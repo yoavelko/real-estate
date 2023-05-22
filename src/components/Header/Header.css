@@ -1,0 +1,117 @@
+#header {
+    background-color: rgb(243,245,247);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: large;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    z-index: 99;
+  }
+  
+  select {
+    height: 50px;
+    line-height: 50px;
+    font-size: 12pt;
+   }
+  
+  #imgLogo {
+    height: 25vh;
+  }
+  
+  #imgLogo:hover{
+    animation: expand 0.8s;
+  }
+  
+  @keyframes expand {
+    0% { transform: scale(1); }
+    30% { transform: scale(1.2); }
+    50% { transform: scale(1); }
+    70% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+  }
+  
+  #logo {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+  }
+  
+  #language {
+    height: 5vh;
+    border-radius: 15px;
+    font-size: small;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  #languageMedia{
+    display: none;
+  }
+  
+  .header:hover {
+    color:  rgb(1,151,252);
+  }
+  
+  .header {
+    position: relative;
+  }
+  
+  .header::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: -0.5vw;
+    bottom: -1.2vh;
+    background-color: rgb(1,151,252);
+    transition: all 0.2s ease-out;
+  }
+  
+  .header:hover::before {
+    width: calc(100% + 1vw);
+  
+  }
+
+
+@media screen and (max-width: 768px){
+
+  body {
+    width: 100%;
+  }
+
+  #header {
+    width: 100%;
+    height: 10vh;
+    border: 0;
+    border-style: solid;
+    border-bottom: 5px rgba(184, 177, 177, 0.547) solid;
+  }
+
+  .header {
+    font-size: small;
+  }
+
+  #imgLogo {
+    height: 80px;
+  }
+
+  #language {
+    display: none;
+  }
+
+  #languageMedia {
+    display: block;
+    height: 5vh;
+    border-radius: 15px;
+    font-size: x-small;
+    font-weight: bold;
+    text-align: center;
+  }
+
+}
