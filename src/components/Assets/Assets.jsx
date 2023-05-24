@@ -26,7 +26,7 @@ function Assets() {
         </div>
           { data1 && <div id='content'>
             {data1.map((value, index) => {
-              return <Box key={index} result={value} />
+              return <Box key={index} result={value}/>
             })}
           </div>
           }
