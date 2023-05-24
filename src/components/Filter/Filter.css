@@ -12,6 +12,7 @@
 #optContainer {
     display: none;
     position: absolute;
+    z-index: 1;
     background-color: rgb(243,245,247);
     width: 28.55%;
     border: 1.9px rgba(0, 0, 0, 0.708) solid;
@@ -36,7 +37,7 @@
 
 #btnFlexer {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 #subBtn {

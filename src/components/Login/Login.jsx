@@ -5,9 +5,14 @@ import { useState } from 'react';
 
 function Login() {
 
-    const [style, setStyle] = useState('linkedTermsNone')
+
+    let [style, setStyle] = useState('linkedTermsNone')
     const termsShower = () => {
-        setStyle('linkedTermsBlock')
+        if (style === 'linkedTermsNone') {
+            setStyle('linkedTermsBlock')
+        } else {
+            setStyle('linkedTermsNone')
+        }
     }
 
     return (

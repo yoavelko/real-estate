@@ -16,6 +16,9 @@ function Header() {
       <Link to={'/login'}>
         <div className='header' id='login'>Login</div>
       </Link>
+      <Link to={'/myAssets'}>
+        <div className='header' id='login'>My Assets</div>
+      </Link>
       <select name="" id="language">
         <option value="EN">English (UK)</option>
         <option value="HEB">Hebrew</option>

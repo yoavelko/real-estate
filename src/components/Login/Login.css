@@ -4,11 +4,15 @@
 
 #logSignContainer {
     margin: 5vw;
-    height: 70vh;
+    height: 80vh;
     background-color: rgb(243, 245, 247);
     border-radius: 20px;
     display: flex;
     justify-content: space-evenly
+}
+
+#loginContainer {
+    padding-bottom: 11vh;
 }
 
 .dualContainer {

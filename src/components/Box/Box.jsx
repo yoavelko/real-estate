@@ -3,8 +3,12 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import Checkbox from "@mui/material/Checkbox";
+import { useContext } from 'react';
+import { savedContext } from '../../contexts/savedContext';
 
-function Box({ result }) {
+function Box({ result } ) {
+
+    const {saved, setSaved} = useContext(savedContext);
     const fixPrice = result?.price.toString().split('');
     if (7 > fixPrice.length && fixPrice.length > 3) {
         fixPrice[fixPrice.length - 4] += ','
@@ -16,6 +20,19 @@ function Box({ result }) {
     const fixRent = result.rentZestimate?.toString().split('');
     if (fixRent?.length > 3) {
         fixRent[fixRent?.length - 4] += ','
+    }
+
+    const Like = () => {
+        setSaved([...saved, {
+            img: result?.imgSrc, 
+            street: result?.streetAddress, 
+            city: result?.city, 
+            state: result?.state, 
+            bedrooms: result?.bedrooms, 
+            bathrooms: result?.bathrooms, 
+            price: fixPrice, 
+            rent: fixRent}])
+        console.log(saved);
     }
 
     return (
@@ -33,7 +50,7 @@ function Box({ result }) {
                 <div className='description'>{result?.bathrooms} Bathrooms</div>
                 <div className='description'><span className='detail'>Buying price:</span> {fixPrice} <span style={{ fontSize: 'xx-small' }}>USD</span></div>
                 <div className='description'><span className='detail'>Renting price:</span> {fixRent} <span style={{ fontSize: 'xx-small' }}>USD</span></div>
-                <button id='like'>
+                <button id='like' onClick={Like}>
                     <FormControlLabel
                         control={<Checkbox size='small'
                             icon={<FavoriteBorderIcon />}
