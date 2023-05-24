@@ -69,11 +69,13 @@
 
 #like {
     border-radius: 25px;
-    padding-left: 6.5%;
+    /* padding-left: 6.5%; */
     margin-top: 2vh;
     background-color: rgb(169, 211, 4);
     border: rgb(169, 211, 4) solid;
     color: rgb(243, 245, 247);
+    height: 5vh;
+    width: 10vw;
 }
 
 #likeMedia {

@@ -1,14 +1,14 @@
 import './Box.css';
-import FormControlLabel from "@mui/material/FormControlLabel";
-import FavoriteIcon from "@mui/icons-material/Favorite";
-import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
-import Checkbox from "@mui/material/Checkbox";
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { savedContext } from '../../contexts/savedContext';
 
 function Box({ result }) {
 
     let { saved, setSaved } = useContext(savedContext);
+    let [buttonText, setButtonText] = useState('🤍 Save Property')
+    useEffect(()=> {
+        setButtonText(saved.includes(result.zpid)? '❤️ Unsave property' : '🤍 Save property')
+    })
     const fixPrice = result?.price.toString().split('');
 
     if (7 > fixPrice.length && fixPrice.length > 3) {
@@ -24,8 +24,13 @@ function Box({ result }) {
     }
 
     const Like = () => {
-        setSaved([...saved, result]);
-        console.log(saved);
+        if (!saved.includes(result.zpid)) {
+            setSaved([...saved , result.zpid]);
+            setButtonText('❤️ Unsave Property');
+        } else {
+            setSaved(saved.filter(value => value != result.zpid));
+            setButtonText('🤍 Save Property');
+        }
     }
 
     return (
@@ -44,24 +49,12 @@ function Box({ result }) {
                 <div className='description'><span className='detail'>Buying price:</span> {fixPrice} <span style={{ fontSize: 'xx-small' }}>USD</span></div>
                 <div className='description'><span className='detail'>Renting price:</span> {fixRent} <span style={{ fontSize: 'xx-small' }}>USD</span></div>
                 <button id='like' onClick={Like}>
-                    <FormControlLabel
-                        control={<Checkbox size='small'
-                            icon={<FavoriteBorderIcon />}
-                            checkedIcon={<FavoriteIcon />}
-                        />}
-                        label="Save property"
-                    />
+                    {buttonText}
                 </button>
             </div>
             <div id='mediaContainer'>
-                <button id='likeMedia'>
-                    <FormControlLabel
-                        control={<Checkbox size='small'
-                            icon={<FavoriteBorderIcon />}
-                            checkedIcon={<FavoriteIcon />}
-                        />}
-                        label="Save property"
-                    />
+                <button id='likeMedia' onClick={Like}>
+                    {buttonText}
                 </button>
             </div>
         </div>
